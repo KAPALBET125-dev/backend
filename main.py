@@ -1,1 +1,8 @@
-# FastAPI main app with routers for auth, accounts, schedule, etc.
+
+from fastapi import FastAPI
+
+app = FastAPI()
+
+@app.get("/")
+def home():
+    return {"message": "Telegram Userbot Backend API is running"}
