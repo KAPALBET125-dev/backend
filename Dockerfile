@@ -1,5 +1,5 @@
 FROM python:3.11
 WORKDIR /app
-COPY ./app /app
-RUN pip install fastapi uvicorn telethon apscheduler python-jose
+COPY . /app
+RUN pip install --no-cache-dir fastapi uvicorn telethon apscheduler python-jose
 CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
